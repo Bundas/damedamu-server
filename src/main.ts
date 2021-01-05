@@ -161,7 +161,8 @@ io.on('connection', (socket: Socket) => {
     });
 });
 
-const port = process.env.PORT
+const port = process.env.PORT || 80
+
 server.listen(port, () => {
     console.log(`listening on *:${port}`);
 });
