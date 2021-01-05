@@ -1,10 +1,11 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import http from 'http';
 import express from 'express';
 import { Server, Socket } from 'socket.io';
 
 import generateShortId from './utils/generate-short-id';
 import reduceState from './utils/game-reducer';
-import { BaseGameContext } from './shared/types';
+import { BaseGameContext, Color } from './shared/types';
 import { fillStartingPosition } from './shared/algorithm/draughts-engine';
 import { getActionBySquareClick } from './shared/draughts-action-creator';
 
@@ -49,6 +50,7 @@ clients['284007'] = {
     selectedDraught: undefined,
 };
 
+// @ts-ignore
 app.get('/create-game-id', (req, res) => {
     const gameId = generateShortId();
     clients[gameId] = {
@@ -63,7 +65,9 @@ app.get('/create-game-id', (req, res) => {
     res.json({ gameId });
 });
 
+// @ts-ignore
 io.on('connection', (socket: Socket) => {
+    // @ts-ignore
     const gameId = socket.handshake.query.token;
     if (!gameId) {
         console.log(
