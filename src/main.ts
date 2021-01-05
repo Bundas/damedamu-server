@@ -161,6 +161,7 @@ io.on('connection', (socket: Socket) => {
     });
 });
 
-server.listen(3001, () => {
-    console.log('listening on *:3001');
+const port = process.env.PORT
+server.listen(port, () => {
+    console.log(`listening on *:${port}`);
 });
