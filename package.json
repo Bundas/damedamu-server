@@ -1,9 +1,6 @@
 {
     "name": "draughts-server",
     "version": "0.0.0",
-    "engines": {
-        "node": ">= 14.15 <15"
-    },
     "devDependencies": {
         "@prisma/cli": "^2.13.1",
         "@types/jest": "~26.0.15",
