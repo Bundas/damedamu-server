@@ -30,7 +30,7 @@
         "test": "jest --coverage",
         "test:watch": "jest --watch"
     },
-    "author": "Jakub Burda",
+    "author": "Jan Burda",
     "license": "Apache-2.0",
     "dependencies": {
         "@types/express": "^4.17.9",
@@ -40,8 +40,5 @@
         "module-alias": "^2.2.2",
         "socket.io": "^3.0.4",
         "tslib": "~2.0.3"
-    },
-    "volta": {
-        "node": "14.15.0"
     }
 }
